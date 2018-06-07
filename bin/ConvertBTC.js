@@ -7,7 +7,7 @@ const spinner = ora({
   color: 'yellow'
 });
 
-function convertBTC (currency = 'USD', amount = 1) {
+function convertBTC(currency = 'USD', amount = 1) {
 
   const url = `https://apiv2.bitcoinaverage.com/convert/global?from=BTC&to=${currency}&amount=${amount}`;
 
