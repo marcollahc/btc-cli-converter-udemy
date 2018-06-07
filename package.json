@@ -1,0 +1,50 @@
+{
+  "name": "btc-cli-converter",
+  "version": "0.0.1",
+  "description": "BTC converter to country money",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "build": "./node_modules/.bin/babel --out-dir bin src",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --require babel-polyfill"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
+  "preferGlobal": true,
+  "bin": {
+    "btc-cli-converter": "./bin/main.js"
+  },
+  "keywords": [
+    "Bitcoin",
+    "Converter",
+    "Money"
+  ],
+  "author": "Marcos Medeiros <marcolla.hc@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.1",
+    "husky": "^1.0.0-rc.4",
+    "mocha": "^5.1.1",
+    "nock": "^9.3.0",
+    "sinon": "^5.0.10",
+    "sinon-chai": "^3.1.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "ora": "^2.1.0",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
