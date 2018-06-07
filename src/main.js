@@ -11,4 +11,4 @@ program
   .option('-A, --amount <amount>', 'Value in Bitcoin to convert. (Default: 1)')
   .parse(process.argv)
 
-convertBTC(program.amount, program.currency);
+convertBTC(program.currency, program.amount);

@@ -14,9 +14,9 @@ describe('ConvertBTC', () => {
   let consoleStub;
 
   const responseMock = {
-      "price": 7636.37,
-      "time": "2018-06-06 01:59:29",
-      "success": true
+      price: 7636.37,
+      time: "2018-06-06 01:59:29",
+      success: true
   };
 
   beforeEach(() => {
@@ -24,7 +24,7 @@ describe('ConvertBTC', () => {
   });
 
   afterEach(() => {
-    console.info.restore();
+    consoleStub.restore();
   });
 
   it('should use currency USD and 1 as amount default', async () => {
