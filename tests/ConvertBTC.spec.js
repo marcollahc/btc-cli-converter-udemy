@@ -58,8 +58,8 @@ describe('ConvertBTC', () => {
       .query({ from: 'BTC', to: 'BRL', amount: 10 })
       .reply(200, responseMock);
 
-    await convertBTC('BRL');
-    expect(consoleStub).to.have.been.calledWith(`${chalk.red(1)} BTC to ${chalk.cyan('BRL')} = ${chalk.yellow('7636.37')}`);
+    await convertBTC('BRL', 10);
+    expect(consoleStub).to.have.been.calledWith(`${chalk.red(10)} BTC to ${chalk.cyan('BRL')} = ${chalk.yellow('7636.37')}`);
 
   });
 
